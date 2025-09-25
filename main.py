@@ -35,7 +35,7 @@ if page == "View All Movies":
     if st.button("Load All Movies"):
         with st.spinner("Loading all movies..."):
             try:
-                movies = get_all_movies(qdrant_client, limit=5000)
+                movies = get_all_movies(qdrant_client, limit=500)
                 
                 if movies:
                     st.success(f"Found {len(movies)} movies")
